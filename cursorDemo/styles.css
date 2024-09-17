@@ -1,0 +1,141 @@
+body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+}
+
+/* 轮播图样式 */
+.carousel {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: carousel 28s infinite; /* 稍微增加了动画时间 */
+}
+
+.carousel-inner img {
+    width: 25%;
+    height: 100%;
+    object-fit: contain; /* 改为 contain 以确保整个图片可见 */
+    background-color: #f8f8f8; /* 添加背景色 */
+}
+
+@keyframes carousel {
+    0%, 21% { transform: translateX(0); }
+    25%, 46% { transform: translateX(-25%); }
+    50%, 71% { transform: translateX(-50%); }
+    75%, 96% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+/* 添加图片标题样式 */
+.carousel-inner img::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* 对话界面样式 */
+.chat-interface {
+    height: 20vh;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.chat-history {
+    height: 70%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.user {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+}
+
+.ai {
+    align-self: flex-start;
+    background-color: #f0f0f0;
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* 社交媒体链接样式 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .carousel {
+        height: 50vh;
+    }
+
+    .chat-interface {
+        height: 30vh;
+    }
+}

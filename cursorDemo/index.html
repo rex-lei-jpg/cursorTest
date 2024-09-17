@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- 轮播图区域 -->
+        <div class="carousel">
+            <div class="carousel-inner">
+                <img src="pictures/image1.png" alt="cursor锐评1">
+                <img src="pictures/image2.png" alt="cursor锐评2">
+                <img src="pictures/image3.png" alt="cursor锐评3">
+                <img src="pictures/image4.png" alt="cursor锐评4">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 对话界面 -->
+        <section class="chat-interface">
+            <div class="chat-history">
+                <div class="message user">你好，我是用户</div>
+                <div class="message ai">你好，我是AI助手，很高兴为你服务。</div>
+                <!-- 更多预设消息 -->
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="输入你的问题...">
+                <button>发送</button>
+            </div>
+            <div class="chat-controls">
+                <button id="save-button">保存对话</button>
+                <button id="copy-conversation">复制对话</button>
+            </div>
+        </section>
+
+        <!-- 社交媒体链接 -->
+        <section class="social-links">
+            <a href="#" class="social-icon">📘</a>
+            <a href="#" class="social-icon">🐦</a>
+            <a href="#" class="social-icon">📷</a>
+            <a href="#" class="social-icon">🔗</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 我的个人网站. 保留所有权利。</p>
+    </footer>
+    <script src="script.js"></script>
+    <textarea id="conversation-text" style="display: none;"></textarea>
+</body>
+</html>
